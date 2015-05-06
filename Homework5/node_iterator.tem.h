@@ -34,7 +34,7 @@ val_t node_iterator<val_t>::operator * () const
 {
 	if ( this != 0 )
 	{
-		return this-> current-> data (); 
+		return this-> current-> data ();
 	}
 }
 
@@ -53,7 +53,7 @@ template <typename val_t>
 node_iterator<val_t> node_iterator<val_t>::operator ++ ( int )
 {
 	list::node<val_t>* temp ( current );
-	
+
 	current = current-> link ();
 
 	return temp;

@@ -4,7 +4,7 @@
 	homework 5 - sets and set operations
 	hw5.cpp
 	this program will read in three sets of integers. it will display the
-	read in sets then perform set operations and display the results 
+	read in sets then perform set operations and display the results
 	to the screen.
 */
 
@@ -13,10 +13,10 @@
 int main ( int argc, char* argv [] )
 {
 /*
-        checks that enough arguments were provided at the command line to run
-        the program
+  checks that enough arguments were provided at the command line to run
+  the program
 */
-        hw5::check_args ( argc );
+  hw5::check_args ( argc );
 
 /*
 	greets the user with a brief description of the homework 5 program
@@ -26,7 +26,7 @@ int main ( int argc, char* argv [] )
 	set <int> A, B, C;
 
 /*
-	reads the contents of the command line provided file and stores them 
+	reads the contents of the command line provided file and stores them
 	into sets
 */
 	hw5::read_file ( argv[1], A, B, C );
@@ -70,7 +70,7 @@ int main ( int argc, char* argv [] )
 /*
 	is true? [ ( A [intersect] B ) == ( B [difference] C ) ]
 */
-	bool equ = ( A & B ) == ( B - C ); 
+	bool equ = ( A & B ) == ( B - C );
 	std::cout << "\n( A & B ) == ( B - C ) \n= " << ( A & B ) << " == " \
 	<< ( B - C ) << " = " << std::boolalpha << equ << '\n';
 

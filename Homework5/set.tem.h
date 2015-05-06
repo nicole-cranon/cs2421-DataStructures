@@ -109,7 +109,7 @@ void set<val_t>::insert ( const val_t& entry )
 template <typename val_t>
 bool set<val_t>::remove ( const val_t& target )
 {
-	
+
 	if ( this-> data.erase_one ( target ) )
 	{
 		--this->length;
@@ -129,13 +129,13 @@ void set<val_t>::clear ()
 template <typename val_t>
 typename set<val_t>::iterator set<val_t>::begin ()
 {
-        return this-> data.begin ();
+  return this-> data.begin ();
 }
 
 template <typename val_t>
 typename set<val_t>::iterator set<val_t>::end ()
 {
-        return this-> data.end ();
+  return this-> data.end ();
 }
 
 
@@ -211,7 +211,7 @@ set<val_t> set<val_t>::operator - ( const set<val_t>& s ) const
 	set<val_t>::iterator itr;
 
 /*
-	if a data entry of this set belongs to this set and only this set 
+	if a data entry of this set belongs to this set and only this set
 	insert into the difference set
 */
 
@@ -261,7 +261,7 @@ std::ostream& operator << ( std::ostream& out, const set<val_t>& s )
 	typename set<val_t>::iterator itr;
 	itr = s.begin ();
 
-	out << "{ "; 
+	out << "{ ";
 
 	for ( int i = 0; i < s.length; ++i )
 	{

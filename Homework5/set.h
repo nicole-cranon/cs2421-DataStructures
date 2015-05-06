@@ -241,6 +241,4 @@ private:
 
 
 #include "set.tem.h"
-
-
 #endif

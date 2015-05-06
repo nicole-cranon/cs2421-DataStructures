@@ -42,7 +42,7 @@ bag<val_t>::~bag ()
 	constant member functions
 */
 template <typename val_t>
-unsigned bag<val_t>::count ( const val_t& target ) const 
+unsigned bag<val_t>::count ( const val_t& target ) const
 {
 	unsigned found = 0;
 	const list::node<val_t>* cursor = this-> head_ptr;
@@ -53,7 +53,7 @@ unsigned bag<val_t>::count ( const val_t& target ) const
 		if ( cursor != 0 )
 		{
 			++found;
-                	cursor = cursor-> link ();
+      cursor = cursor-> link ();
 		}
 	}
 
@@ -81,15 +81,15 @@ val_t bag<val_t>::grab () const
 }
 
 template <typename val_t>
-const typename bag<val_t>::iterator bag<val_t>::begin () const 
-{ 
-	return iterator ( this-> head_ptr ); 
+const typename bag<val_t>::iterator bag<val_t>::begin () const
+{
+	return iterator ( this-> head_ptr );
 }
 
 template <typename val_t>
-const typename bag<val_t>::iterator bag<val_t>::end () const 
+const typename bag<val_t>::iterator bag<val_t>::end () const
 {
-	return iterator (); 
+	return iterator ();
 }
 
 
@@ -158,13 +158,13 @@ void bag<val_t>::clear ()
 template <typename val_t>
 typename bag<val_t>::iterator bag<val_t>::begin ()
 {
-        return iterator ( this-> head_ptr );
+  return iterator ( this-> head_ptr );
 }
 
 template <typename val_t>
-typename bag<val_t>::iterator bag<val_t>::end () 
+typename bag<val_t>::iterator bag<val_t>::end ()
 {
-        return iterator ();
+  return iterator ();
 }
 
 

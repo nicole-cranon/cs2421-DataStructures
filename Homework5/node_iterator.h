@@ -4,9 +4,9 @@
 	homework 5 - sets and set operations
 	node_iterator.h
 	this file contains an iterator for the nodes that compose a linked
-	list. if used with an isolated node there is no guarantee of the 
+	list. if used with an isolated node there is no guarantee of the
 	behavior of the node iterator. the node iterator is derived from the
-	forward iterator of the standard library contained in the 
+	forward iterator of the standard library contained in the
 	node_iterator class:
 		-default constructor
 		-a constructor that takes a node*
@@ -39,15 +39,15 @@ public:
 */
 
 /*
-	precondition:	none
+	precondition:		none
 	postcondition:	creates a node iterater with a null pointer
 */
 	node_iterator ();
 
 /*
-	precondition:	a pointer to the head node of a linked list
-	postcondition:	creates an iterator pointing to the head of the 
-			linked list
+	precondition:		a pointer to the head node of a linked list
+	postcondition:	creates an iterator pointing to the head of the
+									linked list
 */
 	node_iterator ( list::node<val_t>* );
 
@@ -57,9 +57,9 @@ public:
 */
 
 /*
-	precondition:	none
-	postcondition:	returns the data held at the iterator's current 
-			position
+	precondition:		none
+	postcondition:	returns the data held at the iterator's current
+									position
 */
 	val_t operator * () const;
 
@@ -70,29 +70,29 @@ public:
 
 /*
 	precondition: 	none
-	postcondition:	uses pre iteration to advance forward through the 
-			linked list
+	postcondition:	uses pre iteration to advance forward through the
+									linked list
 */
 	node_iterator& operator ++ ();
 
 /*
-	precondition:	none
-	postcondition:	uses post iteration to advance forward through the 
-			linked list
+	precondition:		none
+	postcondition:	uses post iteration to advance forward through the
+									linked list
 */
 	node_iterator operator ++ ( int );
 
 /*
-	precondition:	a node_iterator
+	precondition:		a node_iterator
 	postcondition:	returns true if the two iterators are equal, false
-			otherwise
+									otherwise
 */
 	bool operator == ( const node_iterator& ) const;
 
 /*
-	precondition:	a node_iterator
+	precondition:		a node_iterator
 	postcondition:	returns true if the two iterators are unequal,
-			false otherwise
+									false otherwise
 */
 	bool operator != ( const node_iterator& ) const;
 

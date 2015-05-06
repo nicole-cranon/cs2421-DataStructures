@@ -3,7 +3,7 @@
 	csci 2421, fall 2013
 	homework 4 - linked list based bag
 	node.tem.h
-	see node.tem.h for the documentation of the node class and the linked 
+	see node.tem.h for the documentation of the node class and the linked
 	list library or toolkit
 */
 
@@ -100,7 +100,7 @@ namespace linkedlist
 		if ( previous != 0 )
 		{
 /*
-			create a new node with data_field = data and 
+			create a new node with data_field = data and
 			link_field = previous-> link (). then sets the previous
 			node's link_field = new_node pointer
 */
@@ -131,24 +131,24 @@ namespace linkedlist
 	}
 
 	template <typename val_t>
-        const node<val_t>* search ( const node<val_t>* head, const val_t& \
+  const node<val_t>* search ( const node<val_t>* head, const val_t& \
 	target )
+  {
+    if ( head != 0 )
+    {
+      const node<val_t>* cursor = head;
+
+      for ( ; cursor != 0; cursor = cursor-> link () )
+      {
+        if ( cursor-> data () == target )
         {
-                if ( head != 0 )
-                {
-                        const node<val_t>* cursor = head;
-
-                        for ( ; cursor != 0; cursor = cursor-> link () )
-                        {
-                                if ( cursor-> data () == target )
-                                {
-                                        return cursor;
-                                }
-                        }
-                }
-
-                return 0;
+          return cursor;
         }
+      }
+    }
+
+    return 0;
+  }
 
 	template <typename val_t>
 	node<val_t>* locate ( node<val_t>* head, typename node<val_t>::size_t\
@@ -179,32 +179,32 @@ namespace linkedlist
 	}
 
 	template <typename val_t>
-        const node<val_t>* locate ( const node<val_t>* head, typename \
+  const node<val_t>* locate ( const node<val_t>* head, typename \
 	node<val_t>::size_t position )
+  {
+    if ( position > 0 && position <= length ( head ) )
+    {
+      unsigned itr = 1;
+      const node<val_t>* cursor = head;
+
+      if ( position == 1 )
+      {
+        return head;
+      }
+
+      else
+      {
+        for ( int i = 1; i < position; ++i )
         {
-                if ( position > 0 && position <= length ( head ) )
-                {
-                        unsigned itr = 1;
-                        const node<val_t>* cursor = head;
-
-                        if ( position == 1 )
-                        {
-                                return head;
-                        }
-
-                        else
-                        {
-                                for ( int i = 1; i < position; ++i )
-                                {
-                                        cursor = cursor-> link ();
-                                }
-
-                                return cursor;
-                        }
-                }
-
-                return 0;
+                cursor = cursor-> link ();
         }
+
+        return cursor;
+      }
+	  }
+
+    return 0;
+  }
 
 	template <typename val_t>
 	void head_remove ( node<val_t>*& head )
