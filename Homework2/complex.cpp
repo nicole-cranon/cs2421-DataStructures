@@ -87,9 +87,8 @@ complex complex::operator * ( const complex& c ) const
 	complex new_c;
 
 	/*
-	result of ...
-	complex	=	complex1 * complex2
-		=	( real1 + imag1 ) * ( real2 + imag2 )
+		result of ...
+		complex	=	complex1 * complex2 =	( real1 + imag1 ) * ( real2 + imag2 )
 	*/
 	new_c.real = real * c.real - imaginary * c.imaginary;
 	new_c.imaginary = real * c.imaginary + c.real * imaginary;
@@ -100,11 +99,10 @@ complex complex::operator * ( const complex& c ) const
 complex complex::operator / ( const complex& c ) const
 {
 	complex new_c;
-	
+
 	/*
-	result of ...
-	complex	=	complex1 / complex2
-		=	( real1 + imag1 ) / ( real2 + real2 )
+		result of ...
+		complex	=	complex1 / complex2 =	( real1 + imag1 ) / ( real2 + real2 )
 	*/
 	new_c.real = ( real * c.real + imaginary * c.imaginary ) / ( \
 	c.mag () * c.mag () );

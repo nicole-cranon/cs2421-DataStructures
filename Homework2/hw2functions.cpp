@@ -29,55 +29,55 @@ namespace hw2functions
 
 		do
 		{
-                        //      reset bad and fail bit flags
-                        std::cin.clear ();
+      //	reset bad and fail bit flags
+      std::cin.clear ();
 
-                        //      collect anything after the bad input
-                        getline ( std::cin, bad_in );
+      //	collect anything after the bad input
+      getline ( std::cin, bad_in );
 
 			std::cout << "\nPlease enter a numeric value for " \
 			"resistance (r)-> ";
 			std::cin >> r;
 		} while ( !( std::cin.good() ) );
 
-                do
-                {
-                        //      reset bad and fail bit flags
-                        std::cin.clear ();
+    do
+    {
+	    //	reset bad and fail bit flags
+	    std::cin.clear ();
 
-                        //      collect anything after the bad input
-                        getline ( std::cin, bad_in );
+	    //	collect anything after the bad input
+	    getline ( std::cin, bad_in );
 
-                        std::cout << "\nPlease enter a numeric value for " \
-                        "inductance (l)-> ";
-                        std::cin >> l;
-                } while ( !( std::cin.good() ) );
+	    std::cout << "\nPlease enter a numeric value for " \
+	    "inductance (l)-> ";
+	    std::cin >> l;
+    } while ( !( std::cin.good() ) );
 
-                do
-                {
-                        //      reset bad and fail bit flags
-                        std::cin.clear ();
+    do
+    {
+      //	reset bad and fail bit flags
+      std::cin.clear ();
 
-                        //      collect anything after the bad input
-                        getline ( std::cin, bad_in );
+      //	collect anything after the bad input
+      getline ( std::cin, bad_in );
 
-                        std::cout << "\nPlease enter a numeric value for " \
-                        "capacitance (c)-> ";
-                        std::cin >> c;
-                } while ( !( std::cin.good() ) );
+      std::cout << "\nPlease enter a numeric value for " \
+      "capacitance (c)-> ";
+      std::cin >> c;
+    } while ( !( std::cin.good() ) );
 
-                do
-                {
-                        //      reset bad and fail bit flags
-                        std::cin.clear ();
+    do
+    {
+      //	reset bad and fail bit flags
+      std::cin.clear ();
 
-                        //      collect anything after the bad input
-                        getline ( std::cin, bad_in );
+      //	collect anything after the bad input
+      getline ( std::cin, bad_in );
 
-                        std::cout << "\nPlease enter a numeric value for " \
-                        "the sinusoidal steady-state frequecy (w)-> ";
-                        std::cin >> w;
-                } while ( !( std::cin.good() ) );
+      std::cout << "\nPlease enter a numeric value for " \
+      "the sinusoidal steady-state frequecy (w)-> ";
+      std::cin >> w;
+    } while ( !( std::cin.good() ) );
 
 		std::cout << "\nResistance (r) = " << r << \
 		" ohms\nInductance (l) = " << l << \
@@ -89,7 +89,7 @@ namespace hw2functions
 	complex s_impedance ( double r, double l, double c, double w )
 	{
 		/*
-		impedance (Z) due to restance, inductance, and capacitance
+			impedance (Z) due to restance, inductance, and capacitance
 		*/
 		complex Zr, Zl, Zc;
 

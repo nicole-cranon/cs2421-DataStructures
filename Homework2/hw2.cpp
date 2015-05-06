@@ -4,8 +4,8 @@
 	homework 2 - rlc circuits and complex numbers class
 	hw2.cpp
 	this file is the driver for a program that will compute the complex
-	series and parallel impedance from user defined resistance (r), 
-	inductance (l), capacitance (c), and sinusoidal steady-state 
+	series and parallel impedance from user defined resistance (r),
+	inductance (l), capacitance (c), and sinusoidal steady-state
 	frequency (w)
 */
 
@@ -18,8 +18,8 @@ int main ()
 	hw2::greeting ();
 
 	/*
-	variables for resistance, inductance, capacitance, and sinusoidal
-	steady-state frequency
+		variables for resistance, inductance, capacitance, and sinusoidal
+		steady-state frequency
 	*/
 	double r, l, c, w;
 
@@ -28,7 +28,7 @@ int main ()
 
 	//	calculate series impedance due to the r, l, c, w values
 	complex Zs = hw2::s_impedance ( r, l, c, w );
-	
+
 	//	print complex series impedance
 	std::cout << "\nComplex series impedance:\nZs = " << Zs << '\n';
 
