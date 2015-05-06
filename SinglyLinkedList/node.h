@@ -46,27 +46,27 @@ public:
 */
 
 /*
-	precondition:	none
+	precondition:		none
 	postcondition:	creates an empty node with no link
 */
 	node ();
 
 /*
-	precondition:	data of type val_t
+	precondition:		data of type val_t
 	postcondition:	creates a node with the data provided and no
 				link
 */
 	node ( const val_t& );
 
 /*
-	precondition:	data of type val_t, and a link to another node
-	postcondition:	creates a node with the data and node link 
-			provided 
+	precondition:		data of type val_t, and a link to another node
+	postcondition:	creates a node with the data and node link
+			provided
 */
 	node ( const val_t&, node* );
 
 /*
-	precondition:	an existing node
+	precondition:		an existing node
 	postcondition:	creates a copy of the existing node
 */
 	node ( const node* );
@@ -77,13 +77,13 @@ public:
 */
 
 /*
-	precondition:	none
+	precondition:		none
 	postcondition:	returns the data field
-*/	
+*/
 	val_t data () const;
 
 /*
-	precondition:	none
+	precondition:		none
 	postcondition:	returns a pointer to the next node or null
 */
 	const node* link () const;
@@ -94,19 +94,19 @@ public:
 */
 
 /*
-	precondition:	none
+	precondition:		none
 	postcondition:	returns a pointer to the next node or null
 */
 	node* link ();
 
 /*
-	precondition:	data of type val_t
+	precondition:		data of type val_t
 	postcondition:	sets the data field of the node
 */
 	void set_data ( const val_t& );
 
 /*
-	precondition:	a node pointer
+	precondition:		a node pointer
 	postcondition:	sets the link field of the node
 */
 	void set_link ( node* );

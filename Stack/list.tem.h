@@ -81,22 +81,22 @@ val_t list<val_t>::back () const
 	modification members
 */
 template <typename val_t>
-void list<val_t>::front_insert ( const val_t& data ) 
+void list<val_t>::front_insert ( const val_t& data )
 {
 /*
-        creates a new node with data_field = data and link_field = current head
+  creates a new node with data_field = data and link_field = current head
 */
-        node<val_t>* new_head = new node<val_t> ( data, this-> head_ptr );
+  node<val_t>* new_head = new node<val_t> ( data, this-> head_ptr );
 
 /*
-        is this the first insert?
+  is this the first insert?
 */
-        if ( this-> head_ptr == 0 && this-> tail_ptr == 0 )
-        {
-                this-> tail_ptr = new_head;
-        }
+  if ( this-> head_ptr == 0 && this-> tail_ptr == 0 )
+  {
+          this-> tail_ptr = new_head;
+  }
 
-        this-> head_ptr = new_head;
+  this-> head_ptr = new_head;
 
 	++this-> length;
 }
@@ -105,18 +105,18 @@ template <typename val_t>
 void list<val_t>::back_insert ( const val_t& data )
 {
 /*
-        creates a new node with data_field = data and link_field = 0
+  creates a new node with data_field = data and link_field = 0
 */
-        node<val_t>* new_tail = new node<val_t> ( data );
+  node<val_t>* new_tail = new node<val_t> ( data );
 
 /*
-        is this the first insert?
+  is this the first insert?
 */
-        if ( this-> tail_ptr == 0 && this-> head_ptr == 0 )
-        {
-                this-> head_ptr = new_tail;
-		this-> tail_ptr = new_tail;
-        }
+  if ( this-> tail_ptr == 0 && this-> head_ptr == 0 )
+  {
+          this-> head_ptr = new_tail;
+this-> tail_ptr = new_tail;
+  }
 
 /*
 	not the first insert
@@ -192,8 +192,8 @@ const val_t& data )
 template <typename val_t>
 void list<val_t>::head_remove ()
 {
-        if ( this-> head_ptr != 0 )
-        {
+  if ( this-> head_ptr != 0 )
+  {
 /*
 		there is only one item in the list
 */
@@ -201,7 +201,7 @@ void list<val_t>::head_remove ()
 		{
 /*
 			we make the tail pointer null, and allow the code below
-			that deletes the head node pointer to delete the 
+			that deletes the head node pointer to delete the
 			node that both the tail and head pointers point at
 */
 			this-> tail_ptr = 0;
@@ -211,12 +211,12 @@ void list<val_t>::head_remove ()
 		delete the head, and make a null pointer, or point at the next
 		node
 */
-                node<val_t>* frmr_head = this-> head_ptr;
-                this-> head_ptr = frmr_head-> link ();
-                delete frmr_head;
+    node<val_t>* frmr_head = this-> head_ptr;
+    this-> head_ptr = frmr_head-> link ();
+    delete frmr_head;
 
 		-- this-> length;
-        }
+  }
 }
 
 template <typename val_t>
@@ -275,10 +275,10 @@ void list<val_t>::remove ( const typename list<val_t>::iterator& position )
 template <typename val_t>
 void list<val_t>::clear ()
 {
-        while ( this-> head_ptr != 0 )
-        {
-                this-> head_remove ();
-        }
+  while ( this-> head_ptr != 0 )
+  {
+    this-> head_remove ();
+  }
 }
 
 template <typename val_t>
@@ -291,8 +291,8 @@ typename list<val_t>::iterator list<val_t>::begin ()
 template <typename val_t>
 typename list<val_t>::iterator list<val_t>::end ()
 {
-        typename list<val_t>::iterator itr;
-        return itr;
+  typename list<val_t>::iterator itr;
+  return itr;
 }
 
 

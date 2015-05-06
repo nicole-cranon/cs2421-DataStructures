@@ -60,8 +60,8 @@ public:
 
 /*
 	precondition:	data of type val_t, and a link to another node
-	postcondition:	creates a node with the data and node link 
-			provided 
+	postcondition:	creates a node with the data and node link
+			provided
 */
 	node ( const val_t&, node* );
 
@@ -79,7 +79,7 @@ public:
 /*
 	precondition:	none
 	postcondition:	returns the data field
-*/	
+*/
 	val_t data () const;
 
 /*

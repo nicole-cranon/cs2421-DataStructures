@@ -9,13 +9,13 @@
 		-a copy constructor, constructing a copy of a list
 		-an overloaded destructor
 		-a function length, that returns the length of the list
-                -a function front, that returns the data contained at the head
-                -a function back, that returns the data contained at the tail
-		-a function front insert, that performs an insert at the head 
+    -a function front, that returns the data contained at the head
+    -a function back, that returns the data contained at the tail
+		-a function front insert, that performs an insert at the head
 		 of the linked list
 		-a function back insert, that performs an insert at the tail
 		 of a linked list
-		-a function insert, that performs an insert at a location 
+		-a function insert, that performs an insert at a location
 		 other than the head or tail
 		-a function head remove, to remove the head of the linked list
 		-a function remove, to remove a node of the linked list that is
@@ -98,10 +98,10 @@ public:
 */
 
 /*
-        precondition:   none
-        postcondition:  returns the length of the list
+  precondition:   none
+  postcondition:  returns the length of the list
 */
-        unsigned size () const;
+  unsigned size () const;
 
 /*
 	precondition:	none
@@ -133,10 +133,10 @@ public:
 */
 
 /*
-        precondition:   a data entry of type val_t
-        postcondition:  inserts a new node at the head of the linked list
+  precondition:   a data entry of type val_t
+  postcondition:  inserts a new node at the head of the linked list
 */
-        void front_insert ( const val_t& );
+  void front_insert ( const val_t& );
 
 /*
 	precondition:	a data entry of type val_t
@@ -145,47 +145,47 @@ public:
 	void back_insert ( const val_t& );
 
 /*
-        precondition:   an iterator to a position, and an entry value
-        postcondition:  inserts an entry at the position of the iterator, 
-			such that:
-			( ... , new_entry, iterator, ... )
-			*this is not an efficient insertion as it requires the
-			walking of the list to the position to perform the
-			insert
+  precondition:   an iterator to a position, and an entry value
+  postcondition:  inserts an entry at the position of the iterator,
+									such that:
+									( ... , new_entry, iterator, ... )
+									*this is not an efficient insertion as it requires the
+									walking of the list to the position to perform the
+									insert
 */
-        void insert ( const iterator&, const val_t& );
+  void insert ( const iterator&, const val_t& );
 
 /*
-        precondition:   none
-        postcondition:  removes the current head node
+  precondition:   none
+  postcondition:  removes the current head node
 */
-        void head_remove ();
+  void head_remove ();
 
 /*
-        precondition:   an iterator at the position of the entry to be removed
-        postcondition:  removes the list entry. *this is not an efficient
-			removal as it requires the walking of the list to the
-			removal position
+  precondition:   an iterator at the position of the entry to be removed
+  postcondition:  removes the list entry. *this is not an efficient
+									removal as it requires the walking of the list to the
+									removal position
 */
-        void remove ( const iterator& );
+  void remove ( const iterator& );
 
 /*
-        precondition:   none
-        postcondition:  removes all the nodes of the linked list
+  precondition:   none
+  postcondition:  removes all the nodes of the linked list
 */
-        void clear ();
+  void clear ();
 
 /*
-        precondition:   none
-        postcondition:  returns an iterator at the head of the list
+  precondition:   none
+  postcondition:  returns an iterator at the head of the list
 */
-        iterator begin ();
+  iterator begin ();
 
 /*
-        precondition:   none
-        postcondition:  returns an iterator at the end of the list
+  precondition:   none
+  postcondition:  returns an iterator at the end of the list
 */
-        iterator end ();
+  iterator end ();
 
 
 /*
