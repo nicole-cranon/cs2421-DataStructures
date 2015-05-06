@@ -31,7 +31,6 @@ stack<val_t>::~stack ()
 	data.clear ();
 }
 
-
 /*
 	constant members
 */
@@ -51,7 +50,6 @@ unsigned stack<val_t>::size () const
 {
 	return this-> data.size ();
 }
-
 
 /*
 	modification members

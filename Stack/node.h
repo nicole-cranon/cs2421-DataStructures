@@ -40,7 +40,6 @@ public:
 */
 	typedef unsigned size_t;
 
-
 /*
 	constructors
 */
@@ -71,7 +70,6 @@ public:
 */
 	node ( const node* );
 
-
 /*
 	constant members
 */
@@ -87,7 +85,6 @@ public:
 	postcondition:	returns a pointer to the next node or null
 */
 	const node* link () const;
-
 
 /*
 	modification members
@@ -118,6 +115,4 @@ public:
 
 
 #include "node.tem.h"
-
-
 #endif

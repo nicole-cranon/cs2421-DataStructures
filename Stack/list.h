@@ -49,7 +49,6 @@ class list;
 template <typename val_t>
 std::ostream& operator << ( std::ostream&, const list<val_t>& );
 
-
 template <typename val_t>
 class list
 {
@@ -81,7 +80,6 @@ public:
 */
 	list ( const list& );
 
-
 /*
 	destructor
 */
@@ -91,7 +89,6 @@ public:
 	postcondition:	destroys a linked list
 */
 	~list ();
-
 
 /*
 	constant member functions
@@ -126,7 +123,6 @@ public:
 	postcondition:	returns the data of the tail pointer of the linked list
 */
 	val_t back () const;
-
 
 /*
 	modification member functions
@@ -187,7 +183,6 @@ public:
 */
   iterator end ();
 
-
 /*
 	operator functions
 */
@@ -203,7 +198,6 @@ public:
 	postcondition:	appends the existing list to this list
 */
 	list operator + ( const list& ) const;
-
 
 /*
 	friends
@@ -222,5 +216,4 @@ private:
 
 
 #include "list.tem.h"
-
 #endif

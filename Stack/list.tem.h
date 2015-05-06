@@ -30,7 +30,6 @@ list<val_t>::list ( const list& l )
 	tail_ptr = new node<val_t> ( l.tail_ptr );
 }
 
-
 /*
 	destructor
 */
@@ -39,7 +38,6 @@ list<val_t>::~list ()
 {
 	this-> clear ();
 }
-
 
 /*
 	constant member functions
@@ -75,7 +73,6 @@ val_t list<val_t>::back () const
 {
 	return this-> tail_ptr-> data ();
 }
-
 
 /*
 	modification members
@@ -294,7 +291,6 @@ typename list<val_t>::iterator list<val_t>::end ()
   typename list<val_t>::iterator itr;
   return itr;
 }
-
 
 /*
 	operator functions

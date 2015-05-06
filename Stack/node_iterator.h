@@ -69,7 +69,6 @@ public:
 */
 	~node_iterator ();
 
-
 /*
   operator functions
 */
@@ -115,13 +114,10 @@ public:
 */
   bool operator != ( const node_iterator& ) const;
 
-
 private:
 	node<val_t>* current;
 };
 
 
 #include "node_iterator.tem.h"
-
-
 #endif

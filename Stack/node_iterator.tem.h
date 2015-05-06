@@ -31,7 +31,6 @@ node_iterator<val_t>::node_iterator ( const node_iterator& nitr)
 	current = nitr.current;
 }
 
-
 /*
 	destructor
 */
@@ -41,7 +40,6 @@ node_iterator<val_t>::~node_iterator ()
 	current = 0;
 }
 
-
 /*
 	constant member functions
 */
@@ -50,7 +48,6 @@ val_t node_iterator<val_t>::operator * () const
 {
 	return this-> current-> data ();
 }
-
 
 /*
 	operator functions

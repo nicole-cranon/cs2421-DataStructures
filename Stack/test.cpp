@@ -1,3 +1,7 @@
+/*
+	test
+*/
+
 #include "stack.h"
 
 int main ()

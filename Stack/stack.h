@@ -42,12 +42,10 @@ public:
 */
 	stack ( const stack& );
 
-
 /*
 	destructor
 */
 	~stack ();
-
 
 /*
 	constant members
@@ -61,7 +59,7 @@ public:
 
 /*
 	precondition:	none
-	postcondition:	returns the item at the top of the list without 
+	postcondition:	returns the item at the top of the list without
 			removing it from the stack
 */
 	val_t front () const;
@@ -71,7 +69,6 @@ public:
 	postcondition:	returns the number of items on the stack
 */
 	unsigned size () const;
-
 
 /*
 	modification members
@@ -95,6 +92,4 @@ private:
 
 
 #include "stack.tem.h"
-
-
 #endif
