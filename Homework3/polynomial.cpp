@@ -14,8 +14,8 @@
 	constructors
 */
 
-polynomial::polynomial () : degree ( 0 ) 
-{ 
+polynomial::polynomial () : degree ( 0 )
+{
 	coefs = new double  [ 1 ];
 	coefs [ degree ] = 0;
 }
@@ -25,25 +25,25 @@ polynomial::polynomial ( double* coef_arr, unsigned size )
         coefs = new double [ size ];
 	unsigned new_degree;
 
-        for ( int i = 0; i < size; ++i )
-        {
-                coefs [ i ] = coef_arr [ i ];
+  for ( int i = 0; i < size; ++i )
+  {
+    coefs [ i ] = coef_arr [ i ];
 
-                if ( coef_arr [ i ] > 0 )
-                        new_degree = i;
-        }
+    if ( coef_arr [ i ] > 0 )
+      new_degree = i;
+  }
 
 	degree = new_degree;
 }
 
-polynomial::polynomial ( const polynomial& ply ) 
+polynomial::polynomial ( const polynomial& ply )
 {
-        coefs = new double [ ply.degree + 1 ];
+  coefs = new double [ ply.degree + 1 ];
 
-        for ( int i = 0; i < ply.degree + 1; ++i )
-        {
-                coefs [ i ] = ply.coefs [ i ];
-        }
+  for ( int i = 0; i < ply.degree + 1; ++i )
+  {
+    coefs [ i ] = ply.coefs [ i ];
+  }
 
 	degree = ply.degree;
 }
@@ -71,7 +71,7 @@ const double* polynomial::coef_arr () const { return this-> coefs; }
 double polynomial::get_coef ( unsigned deg ) const
 {
 /*
-	if the provided x degree position is less than or equal to the 
+	if the provided x degree position is less than or equal to the
 	highest degree of the current polynomial, return its coefficient
 	else return 0
 */
@@ -109,17 +109,17 @@ double polynomial::eval ( double x ) const
 	modification member functions
 */
 
-double polynomial::get_coef ( unsigned deg ) 
+double polynomial::get_coef ( unsigned deg )
 {
 /*
-        if the provided x degree position is less than or equal to the 
-        highest degree of the current polynomial, return its coefficient
-        else return 0
+  if the provided x degree position is less than or equal to the
+  highest degree of the current polynomial, return its coefficient
+  else return 0
 */
-        if ( deg <= this-> degree )
-                return this-> coefs [ deg ];
+  if ( deg <= this-> degree )
+    return this-> coefs [ deg ];
 
-        return 0;
+  return 0;
 }
 
 void polynomial::set_coef ( unsigned deg, double coef )
@@ -129,7 +129,7 @@ void polynomial::set_coef ( unsigned deg, double coef )
 		this-> coefs [ deg ] = coef;
 
 /*
-		if the x degree is the current highest and the coefficient is 
+		if the x degree is the current highest and the coefficient is
 		to be changed to zero, decrement the degree
 */
 		if ( coef == 0 && deg == this-> degree )
@@ -179,7 +179,7 @@ polynomial polynomial::operator + ( const polynomial& ply ) const
 	for ( int i = 0; i < ARR_SIZE; ++i )
 	{
 /*
-		sums the coefficients of each polynomial 
+		sums the coefficients of each polynomial
 */
 		if ( i <= this-> degree )
 			new_coefs [ i ] += this-> coefs [ i ];
@@ -204,7 +204,7 @@ polynomial polynomial::operator * ( const polynomial& ply ) const
 	for ( int i = 0; i < ARR_SIZE; ++i )
 	{
 		new_coefs [ i ] = 0;
-	} 
+	}
 
 	for ( int i = 0; i < this-> degree + 1; ++i )
 	{

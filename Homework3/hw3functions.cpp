@@ -50,7 +50,7 @@ namespace hw3functions
 
 /*
 		counts the numbers on line 1
-*/		
+*/
 		while (inf.peek () != '\n')
 		{
 			inf >> temp;
@@ -108,13 +108,13 @@ namespace hw3functions
 		std::cout << "\nP1 + P2 = " << ply3 << '\n';
 	}
 
-        void multiply ( const polynomial& ply1, const polynomial& ply2 )
-        {
-                polynomial ply3;
-                ply3 = ply1 * ply2;
+  void multiply ( const polynomial& ply1, const polynomial& ply2 )
+  {
+    polynomial ply3;
+    ply3 = ply1 * ply2;
 
-                std::cout << "\nP1 * P2 = " << ply3 << '\n';
-        }
+    std::cout << "\nP1 * P2 = " << ply3 << '\n';
+  }
 
 
 	void evaluate ( char* x, const polynomial& ply1, const polynomial& \
@@ -133,9 +133,9 @@ namespace hw3functions
 
 	void closing ()
 	{
-                std::cout << "\n\n*\n";
-                std::cout << "nicole cranon <nicole.cranon@ucdenver.edu>" \
-                "\ncsci 2421, fall 2013" \
-                "\nhomework assignment 3\n*\n\n\n";
+    std::cout << "\n\n*\n";
+    std::cout << "nicole cranon <nicole.cranon@ucdenver.edu>" \
+    "\ncsci 2421, fall 2013" \
+    "\nhomework assignment 3\n*\n\n\n";
 	}
 }

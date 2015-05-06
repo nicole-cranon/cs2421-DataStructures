@@ -9,9 +9,9 @@
 		-a function to check that enough arguments were passed at the
 		 command line
 		-a function to read in the polynomials of the provided files
-		-a function to add the polynomials and display the 
+		-a function to add the polynomials and display the
 		 resulting polynomial
-		-a function to multiply the polynomials and display the 
+		-a function to multiply the polynomials and display the
 		 resulting polynomial
 		-a function to evaluate the two polynomials at the x value
 		 provided at the command line and dispay their results
@@ -34,41 +34,41 @@ namespace hw3functions
 	void greeting ();
 
 /*
-	precondition:	the numer of arguments provided at the command line
+	precondition:		the numer of arguments provided at the command line
 	postcondition:	checks if there are enough arguments to proceed with
-			the program, if there are the program continues,
-			else it quits
+									the program, if there are the program continues,
+									else it quits
 */
 	void check_args ( int );
 
 /*
-	precondition:	two double pointers, and two unsigned variables to
-			hold the size of those arrays
+	precondition:		two double pointers, and two unsigned variables to
+									hold the size of those arrays
 	postcondition:	creates two coefficient arrays
 */
 	void read_file ( char*, double*&, double*&, unsigned&, unsigned& );
 
 /*
-	precondition:	two polynomials, p1 and p2
+	precondition:		two polynomials, p1 and p2
 	postcondition:	adds p3 = p1 + p2 and displays p3
 */
 	void add ( const polynomial&, const polynomial& );
 
 /*
-	precondition:	two polynomials, p1 and p2
+	precondition:		two polynomials, p1 and p2
 	postcondition:	multiplies p3 = p1 * p2 and displays p3
 */
 	void multiply ( const polynomial&, const polynomial& );
 
 /*
-	precondition:	the x value and the two polynomials
+	precondition:		the x value and the two polynomials
 	postcondition:	evaluates each polynomial at x and displays their
-			results
+									results
 */
 	void evaluate ( char*, const polynomial&, const polynomial& );
 
 /*
-	precondition:	none
+	precondition:		none
 	postcondition:	presents a closing to the program
 */
 	void closing ();
