@@ -122,6 +122,4 @@ private:
 
 
 #include "node_iterator.tem.h"
-
-
 #endif
