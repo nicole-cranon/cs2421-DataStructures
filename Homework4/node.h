@@ -48,22 +48,22 @@ namespace linkedlist
 */
 
 /*
-		precondition:	none
+		precondition:		none
 		postcondition:	creates an empty node with no link
 */
 		node ();
 
 /*
-		precondition:	data of type val_t
+		precondition:		data of type val_t
 		postcondition:	creates a node with the data provided and no
-				link
+										link
 */
 		node ( const val_t& );
 
 /*
-		precondition:	data of type val_t, and a link to another node
-		postcondition:	creates a node with the data and node link 
-				provided 
+		precondition:		data of type val_t, and a link to another node
+		postcondition:	creates a node with the data and node link
+										provided
 */
 		node ( const val_t&, node* );
 
@@ -73,13 +73,13 @@ namespace linkedlist
 */
 
 /*
-		precondition:	none
+		precondition:		none
 		postcondition:	returns the data field
-*/	
+*/
 		val_t data () const;
 
 /*
-		precondition:	none
+		precondition:		none
 		postcondition:	returns a pointer to the next node or null
 */
 		const node* link () const;
@@ -90,19 +90,19 @@ namespace linkedlist
 */
 
 /*
-		precondition:	none
+		precondition:		none
 		postcondition:	returns a pointer to the next node or null
 */
 		node* link ();
 
 /*
-		precondition:	data of type val_t
+		precondition:		data of type val_t
 		postcondition:	sets the data field of the node
 */
 		void set_data ( const val_t& );
 
 /*
-		precondition:	a node pointer
+		precondition:		a node pointer
 		postcondition:	sets the link field of the node
 */
 		void set_link ( node* );
@@ -119,87 +119,87 @@ namespace linkedlist
 */
 
 /*
-	precondition:	a pointer to the head node of a linked list
+	precondition:		a pointer to the head node of a linked list
 	postcondition:	returns the length of the list
 */
 	node::size_t length ( const node* );
 
 /*
-	precondition:	a pointer to the head node of a linked list, and a data
-			entry of type node::val_t
+	precondition:		a pointer to the head node of a linked list, and a data
+									entry of type node::val_t
 	postcondition:	inserts a new node at the head of the linked list, and
-			changes the head pointer to the new node
+									changes the head pointer to the new node
 */
 	void head_insert ( node*&, const node::val_t& );
 
 /*
-	precondition:	a pointer to the node previous of the insert point, and
-			a data value of type node::val_t
-	postcondition:	inserts a new node at the point indicated, note: if 
-			the node pointer to the previous node is null no
-			insert is made
+	precondition:		a pointer to the node previous of the insert point, and
+									a data value of type node::val_t
+	postcondition:	inserts a new node at the point indicated, note: if
+									the node pointer to the previous node is null no
+									insert is made
 */
 	void insert ( node*, const node::val_t& );
 
 /*
-	precondition:	a pointer to the head of a linked list, and target data
-			of type node::val_t
+	precondition:		a pointer to the head of a linked list, and target data
+									of type node::val_t
 	postcondition:	returns a pointer to the node containing the target
-			data if it is within the list, if it does not it 
-			returns null
+									data if it is within the list, if it does not it
+									returns null
 */
 	node* search ( node*, const node::val_t& );
 
 /*
-	precondition:	a pointer to the head of a linked list, and target data
-			of type node::val_t
-	postcondition:	returns a pointer to the node containing the target 
-			data if it is within the list, if it does not it 
-			returns null
+	precondition:		a pointer to the head of a linked list, and target data
+									of type node::val_t
+	postcondition:	returns a pointer to the node containing the target
+									data if it is within the list, if it does not it
+									returns null
 */
 	const node* search ( const node*, const node::val_t& );
 
 /*
-	precondition:	a pointer to the head of a linked list, and a position
-			within the linked list, note: the head of the linked
-			list is at position 1
-	postcondition:	returns a pointer to the node at the position 
-			indicated if it is within the list, else it
-			returns null
+	precondition:		a pointer to the head of a linked list, and a position
+									within the linked list, note: the head of the linked
+									list is at position 1
+	postcondition:	returns a pointer to the node at the position
+									indicated if it is within the list, else it
+									returns null
 */
 	node* locate ( node*, node::size_t );
 
 /*
-        precondition:   a pointer to the head of a linked list, and a position
-                        within the linked list, note: the head of the linked
-                        list is at position 1
-        postcondition:  returns a pointer to the node at the position 
-                        indicated if it is within the list, else it
-                        returns null
+  precondition:   a pointer to the head of a linked list, and a position
+                  within the linked list, note: the head of the linked
+                  list is at position 1
+  postcondition:  returns a pointer to the node at the position
+                  indicated if it is within the list, else it
+                  returns null
 */
         const node* locate ( const node*, node::size_t );
 
 /*
-	precondition:	a pointer to the head of a linked list
+	precondition:		a pointer to the head of a linked list
 	postcondition:	removes the current head node
 */
 	void head_remove ( node*& );
 
 /*
-	precondition:	a pointer to the node previous the one to be removed
+	precondition:		a pointer to the node previous the one to be removed
 	postcondition:	removes the node following the previous node
 */
 	void remove ( node* );
 
 /*
-	precondition:	a pointer to the head of a linked list
+	precondition:		a pointer to the head of a linked list
 	postcondition:	removes all the nodes of the linked list
 */
 	void clear ( node*& );
 
 /*
-	precondition:	a pointer to the head of a source link list, a pointer
-			to the head and tail of a linked list to hold the copy
+	precondition:		a pointer to the head of a source link list, a pointer
+									to the head and tail of a linked list to hold the copy
 	postcondition:	copies the source link list
 */
 	void copy ( const node*, node*&, node*& );

@@ -21,9 +21,9 @@ int main ( int argc, char* argv[] )
 	hw4::check_args ( argc );
 
 /*
-        seed random for use with bag objects
+  seed random for use with bag objects
 */
-        srand ( time (0));
+  srand ( time (0));
 
 /*
 	greeting
@@ -46,7 +46,7 @@ int main ( int argc, char* argv[] )
 
 /*
 	creates two additional bags, one of adjectives and one of adverbs to
-	be used to construct random sentences with the verbs and nouns and 
+	be used to construct random sentences with the verbs and nouns and
 	prints the random sentences
 */
 	hw4::construct_sentences ( nouns, verbs );

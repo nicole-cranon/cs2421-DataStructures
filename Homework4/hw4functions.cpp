@@ -16,23 +16,23 @@ namespace hw4functions
 {
 	void greeting ()
 	{
-                std::string go_ahead;
+    std::string go_ahead;
 
-                std::cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
-                std::cout << "This program will read in two lists, one " \
+    std::cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+    std::cout << "This program will read in two lists, one " \
 		"of nouns, and another of verbs, from a file provided at " \
 		"the command line. It will then construct 5 sentences " \
 		"from randomly chosen nouns and verbs along with " \
 		"adjectives and adverbs.\n";
 
-                std::cout << "\nPress ENTER to continue-> ";
-                getline ( std::cin, go_ahead );
+    std::cout << "\nPress ENTER to continue-> ";
+    getline ( std::cin, go_ahead );
 	}
 
-        void check_args ( int command_args )
-        {
-                assert ( command_args > 1 );
-        }
+  void check_args ( int command_args )
+  {
+          assert ( command_args > 1 );
+  }
 
 	void read_file ( char* file, bag& nouns, bag& verbs)
 	{
@@ -84,7 +84,7 @@ namespace hw4functions
 		adjectives.insert ( "Important" );
 
 /*
-		create random sentences and print each 
+		create random sentences and print each
 */
 		for ( int i = 0; i < ITEMS_IN_BAG; ++i )
 		{
@@ -106,9 +106,9 @@ namespace hw4functions
 
 	void closing ()
 	{
-                std::cout << "\n\n*\n";
-                std::cout << "nicole cranon <nicole.cranon@ucdenver.edu>" \
-                "\ncsci 2421, fall 2013" \
-                "\nhomework assignment 4\n*\n\n\n";
+    std::cout << "\n\n*\n";
+    std::cout << "nicole cranon <nicole.cranon@ucdenver.edu>" \
+    "\ncsci 2421, fall 2013" \
+    "\nhomework assignment 4\n*\n\n\n";
 	}
 }

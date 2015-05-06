@@ -76,7 +76,7 @@ namespace linkedlist
 		if ( previous != 0 )
 		{
 /*
-			create a new node with data_field = data and 
+			create a new node with data_field = data and
 			link_field = previous-> link (). then sets the previous
 			node's link_field = new_node pointer
 */
@@ -104,23 +104,23 @@ namespace linkedlist
 		return 0;
 	}
 
-        const node* search ( const node* head, const node::val_t& target )
+  const node* search ( const node* head, const node::val_t& target )
+  {
+    if ( head != 0 )
+    {
+      const node* cursor = head;
+
+      for ( ; cursor != 0; cursor = cursor-> link () )
+      {
+        if ( cursor-> data () == target )
         {
-                if ( head != 0 )
-                {
-                        const node* cursor = head;
-
-                        for ( ; cursor != 0; cursor = cursor-> link () )
-                        {
-                                if ( cursor-> data () == target )
-                                {
-                                        return cursor;
-                                }
-                        }
-                }
-
-                return 0;
+                return cursor;
         }
+      }
+    }
+
+    return 0;
+  }
 
 	node* locate ( node* head, node::size_t position )
 	{
@@ -148,31 +148,31 @@ namespace linkedlist
 		return 0;
 	}
 
-        const node* locate ( const node* head, node::size_t position )
+  const node* locate ( const node* head, node::size_t position )
+  {
+    if ( position > 0 && position <= length ( head ) )
+    {
+      unsigned itr = 1;
+      const node* cursor = head;
+
+      if ( position == 1 )
+      {
+        return head;
+      }
+
+      else
+      {
+        for ( int i = 1; i < position; ++i )
         {
-                if ( position > 0 && position <= length ( head ) )
-                {
-                        unsigned itr = 1;
-                        const node* cursor = head;
-
-                        if ( position == 1 )
-                        {
-                                return head;
-                        }
-
-                        else
-                        {
-                                for ( int i = 1; i < position; ++i )
-                                {
-                                        cursor = cursor-> link ();
-                                }
-
-                                return cursor;
-                        }
-                }
-
-                return 0;
+                cursor = cursor-> link ();
         }
+
+        return cursor;
+      }
+    }
+
+    return 0;
+  }
 
 	void head_remove ( node*& head )
 	{
