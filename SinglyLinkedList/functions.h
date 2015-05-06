@@ -1,6 +1,6 @@
 /*
-nicole cranon <nicole.cranon@ucdenver.edu
-csci 2421, fall 2013
+  nicole cranon <nicole.cranon@ucdenver.edu
+  csci 2421, fall 2013
 */
 
 /*

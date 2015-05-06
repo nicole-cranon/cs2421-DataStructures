@@ -69,7 +69,6 @@ public:
 */
 	~node_iterator ();
 
-
 /*
   operator functions
 */

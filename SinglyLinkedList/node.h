@@ -40,7 +40,6 @@ public:
 */
 	typedef unsigned size_t;
 
-
 /*
 	constructors
 */
@@ -118,6 +117,4 @@ public:
 
 
 #include "node.tem.h"
-
-
 #endif

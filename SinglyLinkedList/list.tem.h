@@ -30,7 +30,6 @@ list<val_t>::list ( const list& l )
 	tail_ptr = new node<val_t> ( l.tail_ptr );
 }
 
-
 /*
 	destructor
 */

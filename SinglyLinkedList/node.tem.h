@@ -36,7 +36,6 @@ const node<val_t>* node<val_t>::link () const
 	return link_field;
 }
 
-
 /*
 	node modification members
 */

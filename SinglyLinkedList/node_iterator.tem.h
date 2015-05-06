@@ -31,7 +31,6 @@ node_iterator<val_t>::node_iterator ( const node_iterator& nitr)
 	current = nitr.current;
 }
 
-
 /*
 	destructor
 */
